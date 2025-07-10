@@ -20,18 +20,27 @@ export default function Contact() {
         </div>
         
         {/* Email Card */}
-        <div className="bg-white dark:bg-[#161b22] p-4 mb-6 rounded-lg border border-gray-200 dark:border-[#30363d] flex items-center justify-between">
-          <div className="flex items-center">
-            <svg className="w-5 h-5 mr-3 text-gray-800 dark:text-white" fill="currentColor" viewBox="0 0 24 24">
+        <div className="bg-white dark:bg-[#161b22] p-4 mb-6 rounded-lg border border-gray-200 dark:border-[#30363d] flex flex-col sm:flex-row items-start sm:items-center justify-between">
+          <div className="flex items-center mb-3 sm:mb-0">
+            <svg className="w-5 h-5 mr-3 text-gray-800 dark:text-white flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 11.87-1.44L12 11l6.73-4.19a.85.85 0 11.87 1.44z" />
             </svg>
-            <span className="text-gray-700 dark:text-gray-300">{email}</span>
+            <span className="text-gray-700 dark:text-gray-300 text-sm sm:text-base break-all">{email}</span>
           </div>
           <button 
             onClick={copyEmail}
-            className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded text-xs font-medium transition-colors"
+            className="w-full sm:w-auto px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded text-xs font-medium transition-colors flex items-center justify-center"
           >
-            {copied ? 'Copied!' : 'Copy Email'}
+            {copied ? (
+              <span className="flex items-center">
+                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Copied!
+              </span>
+            ) : (
+              'Copy Email'
+            )}
           </button>
         </div>
         

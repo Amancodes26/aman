@@ -17,46 +17,67 @@ export default function ProofOfWork() {
 
   const experience = [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Innovation Corp',
-      duration: '2022 - Present',
-      description: 'Led development of scalable web applications using React, Next.js, and Node.js.',
-      technologies: ['React', 'Next.js', 'Node.js', 'PostgreSQL']
+      title: 'Backend Intern',
+      company: 'DSEU',
+      duration: 'June 2023 - Present',
+      description: 'Implementing services for 21 campuses and supporting 21,000 students with backend solutions. Designing and optimizing database schemas for efficient data retrieval and storage.',
+      technologies: ['Node.js', 'Express.js', 'MongoDB', 'RESTful APIs']
+    },
+    
+    // {
+    //   title: 'Freelance Developer',
+    //   company: 'SchemeSeva',
+    //   duration: '2023 - Present',
+    //   description: 'Developed a comprehensive government scheme management platform to help citizens find and apply for relevant government schemes. Implemented advanced search algorithms and user-friendly interfaces.',
+    //   technologies: ['React', 'Next.js', 'Node.js', 'PostgreSQL']
+    // },
+    {
+      title: 'Full Stack Developer',
+      company: 'FrameFusion',
+      duration: 'Dec 2024 - Feb 2025',
+      description: 'Created an innovative real-time collaborative presentation tool that allows teams to design and present slides together. Implemented WebSocket-based collaboration features and real-time updates.',
+      technologies: ['React', 'TypeScript',  'Express.js']
     },
     {
       title: 'Frontend Developer',
-      company: 'Digital Solutions Ltd',
-      duration: '2020 - 2022',
-      description: 'Built responsive user interfaces and improved application performance. Collaborated with UX team to implement modern design systems.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'REST APIs']
+      company: 'Moreton Bay',
+      duration: 'Jun 2024 - Jul 2024',
+      description: 'Enhanced website navigation by designing site maps, improved usability with user flow diagrams, simplified volunteer application management, and solved complex web development problems using JavaScript.',
+      technologies: ['JavaScript', 'User Experience', 'UI/UX Design', 'Form Development']
     },
-    {
-      title: 'Junior Full Stack Developer',
-      company: 'StartupXYZ',
-      duration: '2019 - 2020',
-      description: 'Developed full-stack applications and learned modern development practices. Contributed to both frontend and backend development.',
-      technologies: ['JavaScript', 'Express.js', 'MongoDB', 'Bootstrap']
-    }
+    // {
+    //   title: 'Open Source Contributor',
+    //   company: 'GitHub Projects',
+    //   duration: '2021 - Present',
+    //   description: 'Actively contribute to open-source projects focused on web development and accessibility. Resolved issues, implemented new features, and participated in code reviews.',
+    //   technologies: ['JavaScript', 'React', 'Node.js', 'TypeScript']
+    // }
   ]
 
   const certifications = [
     {
-      name: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      year: '2023',
-      badge: 'AWS'
-    },
-    {
-      name: 'Meta Frontend Developer',
+      name: 'Full Stack Web Development',
       issuer: 'Meta',
-      year: '2022',
-      badge: 'Meta'
+      year: '2023',
+      badge: 'META'
     },
     {
-      name: 'Google Cloud Professional',
-      issuer: 'Google Cloud',
+      name: 'React & Next.js Mastery',
+      issuer: 'Udemy',
+      year: '2023',
+      badge: 'React'
+    },
+    {
+      name: 'Advanced JavaScript',
+      issuer: 'freeCodeCamp',
       year: '2022',
-      badge: 'GCP'
+      badge: 'JS'
+    },
+    {
+      name: 'UI/UX Design Principles',
+      issuer: 'Coursera',
+      year: '2022',
+      badge: 'UI/UX'
     }
   ]
 
