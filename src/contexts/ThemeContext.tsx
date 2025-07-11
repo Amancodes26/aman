@@ -11,7 +11,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('dark')
+  const [theme, setTheme] = useState<Theme>('light')
   const [mounted, setMounted] = useState(false)
 
   // Initialize theme from localStorage or system preference
@@ -22,9 +22,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         const savedTheme = localStorage.getItem('theme') as Theme | null
         if (savedTheme) {
           setTheme(savedTheme)
-        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-          setTheme('light')
         }
+        // Default is already light, no need to check system preference
       } catch (error) {
         console.error('Error accessing localStorage:', error)
       }
