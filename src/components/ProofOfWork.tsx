@@ -5,14 +5,18 @@ export default function ProofOfWork() {
   const [activeTab, setActiveTab] = useState('skills')
 
   const skills = [
-    { name: 'JavaScript', level: 90, category: 'Frontend' },
-    { name: 'TypeScript', level: 85, category: 'Frontend' },
-    { name: 'React', level: 88, category: 'Frontend' },
-    { name: 'Next.js', level: 82, category: 'Frontend' },
-    { name: 'Node.js', level: 80, category: 'Backend' },
-    { name: 'Python', level: 75, category: 'Backend' },
-    { name: 'PostgreSQL', level: 78, category: 'Database' },
-    { name: 'MongoDB', level: 72, category: 'Database' },
+    { name: 'JavaScript', category: 'Frontend', icon: '⚡' },
+    { name: 'TypeScript', category: 'Frontend', icon: '🔷' },
+    { name: 'React', category: 'Frontend', icon: '⚛️' },
+    { name: 'Next.js', category: 'Frontend', icon: '▲' },
+    { name: 'Node.js', category: 'Backend', icon: '🟢' },
+    { name: 'Python', category: 'Backend', icon: '🐍' },
+    { name: 'Express.js', category: 'Backend', icon: '🚀' },
+    { name: 'PostgreSQL', category: 'Database', icon: '🐘' },
+    { name: 'MongoDB', category: 'Database', icon: '🍃' },
+    { name: 'Git', category: 'Tools', icon: '📝' },
+    { name: 'Docker', category: 'Tools', icon: '🐳' },
+    { name: 'Tailwind CSS', category: 'Frontend', icon: '🎨' },
   ]
 
   const experience = [
@@ -123,24 +127,21 @@ export default function ProofOfWork() {
 
         {/* Skills Tab */}
         {activeTab === 'skills' && (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="space-y-4">
             {Object.entries(groupedSkills).map(([category, categorySkills]) => (
-              <div key={category} className="bg-gray-50 dark:bg-[#0d1117] p-4 rounded-lg border border-gray-200 dark:border-[#30363d]">
-                <h3 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">{category}</h3>
-                <div className="space-y-3">
+              <div key={category}>
+                <h3 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
+                  {category}
+                </h3>
+                <div className="flex flex-wrap gap-2 mb-4">
                   {categorySkills.map((skill, index) => (
-                    <div key={index} className="group">
-                      <div className="flex justify-between mb-1">
-                        <span className="font-medium text-sm text-gray-900 dark:text-white">{skill.name}</span>
-                        <span className="text-gray-600 dark:text-gray-400 text-xs">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-gray-200 dark:bg-[#21262d] rounded-full h-1.5">
-                        <div
-                          className="bg-gradient-to-r from-blue-500 to-green-500 h-1.5 rounded-full transition-all duration-1000 group-hover:from-green-500 group-hover:to-blue-500"
-                          style={{ width: `${skill.level}%` }}
-                        />
-                      </div>
-                    </div>
+                    <span 
+                      key={index} 
+                      className="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 dark:bg-[#21262d] text-gray-700 dark:text-gray-300 rounded-full text-sm hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
+                    >
+                      <span className="text-xs">{skill.icon}</span>
+                      {skill.name}
+                    </span>
                   ))}
                 </div>
               </div>
