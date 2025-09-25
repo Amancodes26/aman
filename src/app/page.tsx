@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import GitHubActivity from '@/components/GitHubActivity'
 import ProofOfWork from '@/components/ProofOfWork'
+import OpenSourceContributions from '@/components/OpenSourceContributions'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 
@@ -15,6 +16,7 @@ export default function Home() {
           <Hero />
           <GitHubActivity />
           <ProofOfWork />
+          <OpenSourceContributions />
           <Projects />
           <Contact />
         </div>
